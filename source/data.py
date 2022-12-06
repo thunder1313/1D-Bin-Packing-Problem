@@ -1,7 +1,7 @@
 import random
 minWeight = 1
-maxWeight = 10
-numberOfItems = 10
+maxWeight = 100
+numberOfItems = 20000
 choices = [i for i in range(minWeight, maxWeight+1)]
 
 items = random.choices(choices, k = numberOfItems)
