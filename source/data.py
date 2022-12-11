@@ -1,8 +1,14 @@
 import random
-minWeight = 1
-maxWeight = 100
-numberOfItems = 20000
-choices = [i for i in range(minWeight, maxWeight+1)]
+import json
 
-items = random.choices(choices, k = numberOfItems)
-binCapacity = int(maxWeight*1.1) # make each bin 10% bigger than the biggest item
+file = open('input.json')
+# returns JSON object as a dictionary
+data = json.load(file)
+
+minSize = data["min_item_size"]
+maxSize = data["max_item_size"]
+numberOfItems = data["number_of_items"]
+bin_capacity = data["container_size"]
+
+choices = [i for i in range(minSize, maxSize+1)]
+item_sizes = random.choices(choices, k = numberOfItems)
