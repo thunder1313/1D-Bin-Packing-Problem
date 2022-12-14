@@ -1,4 +1,7 @@
+import time
+
 def bestFit(items, capacity):
+    start = time.time()
     t = 1
     remainingSpace = [capacity]
     bins = [[]]
@@ -28,7 +31,15 @@ def bestFit(items, capacity):
             # reser
             bestRemainder = capacity + 1
                 
-    # display bins
+    end = time.time()
+    # timothy = time
+    timothy = end-start
+
+    s = 0
+    for space in remainingSpace:
+        s += space
+        
     # for bin in bins:
-    #     print(bin)
-    return t
+    #     print(bin, end=" ")
+    # print()
+    return t, s, timothy

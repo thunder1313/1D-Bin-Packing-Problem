@@ -11,4 +11,4 @@ numberOfItems = data["number_of_items"]
 bin_capacity = data["container_size"]
 
 choices = [i for i in range(minSize, maxSize+1)]
-item_sizes = random.choices(choices, k = numberOfItems)
+items = random.choices(choices, k = numberOfItems)

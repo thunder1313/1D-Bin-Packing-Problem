@@ -1,4 +1,7 @@
+import time
+
 def bestFitDecreasing(items, capacity):
+    start = time.time()
     items.sort(reverse=1)
     t = 1
     remainingSpace = [capacity]
@@ -29,7 +32,15 @@ def bestFitDecreasing(items, capacity):
             # reser
             bestRemainder = capacity + 1
                 
-    # display bins
+    end = time.time()
+    # timothy = time
+    timothy = end-start
+
+    s = 0
+    for space in remainingSpace:
+        s += space
+        
     # for bin in bins:
-    #     print(bin)
-    return t
+    #     print(bin, end=" ")
+    # print()
+    return t, s, timothy

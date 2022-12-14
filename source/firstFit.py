@@ -1,4 +1,7 @@
+import time
+
 def firstFit(items, capacity):
+    start = time.time()
     t = 1
     remainingSpace = [capacity]
     bins = [[]]
@@ -17,8 +20,14 @@ def firstFit(items, capacity):
                 t += 1
                 remainingSpace.append(capacity - item)
                 bins.append([item])
-                
-    # display bins
+    end = time.time()
+    # timothy = time
+    timothy = end-start
+    
+    s = 0
+    for space in remainingSpace:
+        s += space
     # for bin in bins:
-    #     print(bin)
-    return t
+    #     print(bin, end=" ")
+    # print()
+    return t, s, timothy
