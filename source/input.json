@@ -1,6 +1,6 @@
 {
     "min_item_size": 1,
     "max_item_size": 100,
-    "number_of_items": 100,
+    "number_of_items": 20000,
     "container_size": 100
 }
